@@ -125,7 +125,7 @@ module.exports = function(argv) {
 
       // Create app and server
       app = createApp(db, routes, middlewares, argv);
-      server = app.listen(process.env.PORT || argv.port, argv.host);
+      server = app.listen(process.env.PORT || argv.port, "0.0.0.0"); //argv.host
 
       // Enhance with a destroy function
       enableDestroy(server);
