@@ -1,5 +1,10 @@
 {
   "/api/": "/",
   "/blog/:resource/:id/show": "/:resource/:id",
-  "/blog/:category": "/posts?category=:category"
+  "/blog/:category": "/posts?category=:category",
+  "/api/*": "/$1",
+  "/:resource/:id/show": "/:resource/:id",
+  "/posts/:category": "/posts?category=:category",
+  "/articles\\?id=:id": "/posts/:id",
+  "/path/todos/:userId/:completed": "/todos?userId=:userId&completed=:completed"
 }
